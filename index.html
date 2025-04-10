@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MGM Gestão - Saúde Ocupacional e Segurança do Trabalho</title>
+  <style>
+    /* Reset e Variáveis */
+    :root {
+      --azul-escuro: #1e3a8a;
+      --azul: #1d4ed8;
+      --cinza-claro: #f3f4f6;
+      --branco: #ffffff;
+      --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --font-size-base: 16px;
+      --font-size-lg: 18px;
+      --font-size-xl: 24px;
+      --max-width: 900px; /* Largura máxima para os textos */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fonte);
+      color: #333;
+      line-height: 1.6;
+      background-color: #f3f4f6;
+      width: 100%;
+      margin: 0;
+    }
+
+    section, footer {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    header h1 {
+      font-size: var(--font-size-lg);
+      letter-spacing: 2px; /* Aumenta o espaçamento das letras */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+    }
+
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+      font-size: var(--font-size-lg);
+      text-decoration: none; /* Remove os traços debaixo */
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: var(--azul);
+      bottom: 0;
+      left: 50%;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--azul);
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    /* Hero Topo */
+    .hero-topo {
+      background: linear-gradient(to right, #1e3a8a 40%, #1d4ed8 100%);
+      color: white;
+      padding: 6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      width: 100%;
+      gap: 3rem;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-logo {
+      height: 250px;
+      margin-bottom: 1rem;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    .hero-btn {
+      padding: 1rem 2rem;
+      background: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-btn:hover {
+      background: #1e3a8a;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animações */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateX(-30%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Seção Quem Somos */
+    .section-title {
+      font-size: 2.2rem;
+      color: var(--azul-escuro);
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .section-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      padding: 0 1rem;
+      animation: fadeIn 1.5s ease-out;
+      text-align: justify;
+    }
+
+    /* Seção Serviços */
+    #servicos {
+      background: var(--cinza-claro);
+      padding: 4rem 2rem;
+      width: 100%;
+    }
+
+    #servicos h3 {
+      font-size: 2.5rem;
+      color: var(--azul-escuro);
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    #servicos .section-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+
+    .service-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Seção Contato */
+    #contato {
+      padding: 4rem 2rem;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+      padding: 2rem;
+      background: var(--branco);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+      transition: border-color 0.3s ease;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--azul);
+    }
+
+    button {
+      padding: 1rem 2rem;
+      background: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 60px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background: #1e3a8a;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Seção Localização */
+    .map-section {
+      background: var(--cinza-claro);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .map-section h3 {
+      font-size: 2rem;
+      color: var(--azul-escuro);
+      margin-bottom: 2rem;
+    }
+
+    .map-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .map-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .map-text p {
+      margin-bottom: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      height: 300px;
+    }
+
+    @media (max-width: 768px) {
+      .map-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>MGM Gestão</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Quem Somos</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-topo">
+    <div class="hero-container">
+      <div class="hero-left">
+        <img src="img/logo.png" alt="Logo MGM Gestão" class="hero-logo" />
+        <a href="#servicos" class="btn hero-btn">Conheça nossos serviços</a>
+      </div>
+      <div class="hero-text">
+        <h1>Soluções Completas<br>em Saúde e Segurança no Trabalho</h1>
+        <p>Na MGM Gestão, você reduz custos, garante a segurança da sua empresa e encontra todas as soluções num só lugar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Quem Somos -->
+  <section id="sobre">
+    <h3 class="section-title">Quem Somos</h3>
+    <div class="section-content">
+      <p>A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas. Atuamos com foco em atender às exigências legais e garantir um ambiente de trabalho mais seguro, saudável e produtivo.</p>
+      <p>Com uma equipe qualificada e atendimento humanizado, oferecemos soluções personalizadas para empresas de todos os portes e segmentos.</p>
+    </div>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos">
+    <h3 class="section-title">Serviços Oferecidos</h3>
+    <div class="section-content">
+      <div class="service-item">
+        <span>📄</span>
+        <h4>ASO – Atestado de Saúde Ocupacional</h4>
+      </div>
+      <p>Exame Admissional, Exame Periódico, Exame de Retorno ao Trabalho, Exame de Mudança de Função, Exame Demissional</p>
+      
+      <div class="service-item">
+        <span>🧪</span>
+        <h4>Exames Complementares</h4>
+      </div>
+      <p>Audiometria, Acuidade Visual, Eletrocardiograma (ECG), Espirometria, Exames laboratoriais diversos</p>
+
+      <div class="service-item">
+        <span>📘</span>
+        <h4>Programas e Laudos Técnicos</h4>
+      </div>
+      <p>PCMSO, PPRA / PGR, LTCAT, PPP, Treinamentos em Segurança do Trabalho (NRs)</p>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h3 class="section-title">Fale Conosco</h3>
+    <form onsubmit="enviarFormulario(event)">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="text" placeholder="Seu endereço" required />
+      <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Seção de Localização -->
+  <div class="map-section">
+    <h3>Venha nos visitar!</h3>
+    <div class="map-content">
+      <div class="map-text">
+        <p><strong>Endereço:</strong> Rua Oriano Mendes, 951 - Centro, Sobral - CE</p>
+        <p><strong>Telefone:</strong> (88) 3675-2949</p>
+        <p><strong>E-mail:</strong> contato@mgmgestao.com.br</p>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; <span id="ano"></span> MGM Gestão. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    function enviarFormulario(e) {
+      e.preventDefault();
+      
+      const nome = e.target.querySelector('input[placeholder="Seu nome"]').value;
+      const endereco = e.target.querySelector('input[placeholder="Seu endereço"]').value;
+      const mensagem = e.target.querySelector('textarea[placeholder="Sua mensagem"]').value;
+      
+      const numeroWhatsapp = '5588997263753';
+      const texto = `Olá, sou ${nome}%0AEndereço: ${endereco}%0AMensagem: ${mensagem}`;
+      const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${texto}`;
+      
+      window.open(urlWhatsapp, '_blank');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
