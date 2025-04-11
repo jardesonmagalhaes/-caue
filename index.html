@@ -356,14 +356,63 @@
     <div class="hero-container">
       <div class="hero-left">
         <img src="img/logo.png" alt="Logo MGM Gestão" class="hero-logo" />
-        <a href="#servicos" class="btn hero-btn">Conheça nossos serviços</a>
       </div>
-      <div class="hero-text">
+      <div class="hero-text" style="text-align: center; max-width: 600px;">
         <h1>Soluções Completas<br>em Saúde e Segurança no Trabalho</h1>
         <p>Na MGM Gestão, você reduz custos, garante a segurança da sua empresa e encontra todas as soluções num só lugar.</p>
+        <div style="margin-top: 2rem;">
+          <a href="#servicos" class="btn hero-btn">Conheça nossos serviços</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="img/coracao.png" alt="Coração" class="hero-logo" />
       </div>
     </div>
   </section>
+  
+  <style>
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .hero-left,
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-text {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .hero-logo {
+    height: 220px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-text {
+      order: -1;
+    }
+    .hero-logo {
+      height: 180px;
+    }
+  }
+  </style>
+  
+
 
   <section id="sobre">
     <h3 class="section-title">Quem Somos</h3>
