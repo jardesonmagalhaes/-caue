@@ -38,12 +38,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: nowrap;
       position: sticky;
       top: 0;
       z-index: 1000;
       width: 100%;
       box-sizing: border-box;
-      flex-wrap: wrap;
     }
 
     header h1 {
@@ -194,19 +194,7 @@
       width: 100%;
     }
 
-    #servicos h3 {
-      font-size: 2.5rem;
-      color: var(--verde-escuro);
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-
     #servicos .section-content {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
@@ -222,11 +210,6 @@
 
     .service-item:hover {
       transform: scale(1.05);
-    }
-
-    .service-item h4 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
     }
 
     #contato {
@@ -286,12 +269,6 @@
       text-align: center;
     }
 
-    .map-section h3 {
-      font-size: 2rem;
-      color: var(--verde-escuro);
-      margin-bottom: 2rem;
-    }
-
     .map-content {
       max-width: 900px;
       margin: 0 auto;
@@ -299,16 +276,6 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       align-items: center;
-    }
-
-    .map-text {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: left;
-    }
-
-    .map-text p {
-      margin-bottom: 1rem;
     }
 
     iframe {
@@ -328,20 +295,33 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .menu-container {
+        width: auto;
+      }
+
+      .menu-toggle {
+        width: auto;
+        text-align: center;
+      }
+
+      .menu-dropdown {
+        left: auto;
+        right: 0;
+        width: max-content;
+        min-width: 160px;
+      }
+
       .hero-container {
         flex-direction: column;
         gap: 2rem;
         padding: 2rem 1rem;
         text-align: center;
-      }
-
-      .hero-left,
-      .hero-text {
-        width: 100%;
-      }
-
-      .hero-logo {
-        height: 180px;
       }
 
       #servicos .section-content {
@@ -352,29 +332,8 @@
         grid-template-columns: 1fr;
       }
 
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .menu-container {
-        width: 100%;
-      }
-
-      .menu-toggle {
-        width: 100%;
-        text-align: left;
-      }
-
-      .menu-dropdown {
-        right: auto;
-        left: 0;
-        width: 100%;
-        min-width: unset;
-      }
-
-      .menu-dropdown li a {
-        padding: 12px 16px;
+      .hero-logo {
+        height: 180px;
       }
     }
   </style>
@@ -408,8 +367,7 @@
   <section id="sobre">
     <h3 class="section-title">Quem Somos</h3>
     <div class="section-content">
-      <p>A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas. Atuamos com foco em atender às exigências legais e garantir um ambiente de trabalho mais seguro, saudável e produtivo.</p>
-      <p>Com uma equipe qualificada e atendimento humanizado, oferecemos soluções personalizadas para empresas de todos os portes e segmentos.</p>
+      <p>A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas.</p>
     </div>
   </section>
 
@@ -420,7 +378,7 @@
         <span>📄</span>
         <h4>ASO – Atestado de Saúde Ocupacional</h4>
       </div>
-      <p>Exame Admissional, Periódico, de Retorno, Mudança de Função e Demissional.</p>
+      <p>Exame Admissional, Periódico, Demissional, Retorno ao Trabalho e Mudança de Função.</p>
 
       <div class="service-item">
         <span>🧪</span>
@@ -432,7 +390,7 @@
         <span>📘</span>
         <h4>Programas e Laudos Técnicos</h4>
       </div>
-      <p>PCMSO, PGR, LTCAT, PPP e treinamentos de segurança (NRs).</p>
+      <p>PCMSO, PGR, LTCAT, PPP e treinamentos (NRs).</p>
     </div>
   </section>
 
@@ -489,6 +447,13 @@
       if (!button.contains(e.target) && !menu.contains(e.target)) {
         menu.style.display = 'none';
       }
+    });
+
+    // Fecha menu ao clicar em qualquer item
+    document.querySelectorAll('#menuDropdown a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('menuDropdown').style.display = 'none';
+      });
     });
   </script>
 </body>
