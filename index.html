@@ -264,10 +264,11 @@
     }
 
     .map-section {
-  background: var(--verde-claro);
+  background: #ffffff; /* fundo branco */
   padding: 3rem 1rem;
   text-align: center;
 }
+
 
 .map-section .section-title {
   color: var(--verde-escuro);
@@ -491,7 +492,9 @@
   <section id="sobre">
     <h3 class="section-title">Quem Somos</h3>
     <div class="section-content">
-      <p>A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas.</p>
+      <p>A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas. Atuamos de forma personalizada, buscando soluções eficazes que promovam o bem-estar dos trabalhadores, a redução de riscos e a conformidade com a legislação vigente.
+
+        Com uma equipe multidisciplinar altamente qualificada, oferecemos suporte técnico e estratégico para empresas de diversos portes e segmentos, contribuindo para ambientes de trabalho mais saudáveis, seguros e produtivos. Nosso compromisso é com a valorização da vida, o respeito às normas e a excelência nos serviços prestados.</p>
     </div>
   </section>
 
@@ -570,13 +573,16 @@
 
   <div class="map-section">
     <h3 class="section-title">Venha nos visitar!</h3>
-    <div class="map-clean-layout">
-      <div class="map-info">
-        <p><strong>Endereço:</strong><br>Rua Oriano Mendes, 951 - Centro, Sobral - CE</p>
+    <div class="map-clean-layout" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 900px; margin: 0 auto; align-items: flex-start;">
+      <div class="map-info" style="flex: 1; min-width: 280px; font-size: 1rem; color: #222; line-height: 1.6;">
+        <p><strong>Sede 01:</strong><br>Rua Luiza Amélia, Nº1423 - Centro - Piracuruca - PI</p>
+        <p><strong>Sede 02:</strong><br>Rua 01, Nº560 - Residencial 2 - Maracanaú - CE</p>
         <p><strong>Telefone:</strong><br>(88) 3675-2949</p>
         <p><strong>E-mail:</strong><br>contato@mgmgestao.com.br</p>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen></iframe>
+      <div style="flex: 1; min-width: 300px;">
+        <iframe src="https://www.google.com/maps?q=Rua+Luiza+Amelia,+1423,+Piracuruca,+PI&output=embed" allowfullscreen style="width: 100%; height: 250px; border: 0; border-radius: 6px;"></iframe>
+      </div>
     </div>
   </div>
   
