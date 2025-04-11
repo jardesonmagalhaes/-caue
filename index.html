@@ -264,19 +264,60 @@
     }
 
     .map-section {
-      background: var(--verde-claro);
-      padding: 4rem 2rem;
-      text-align: center;
-    }
+  background: var(--verde-claro);
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
-    .map-content {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
+.map-section .section-title {
+  color: var(--verde-escuro);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.map-clean-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: 2rem;
+  text-align: left;
+}
+
+.map-info {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.map-clean-layout iframe {
+  flex: 1;
+  min-width: 300px;
+  height: 250px;
+  border: 0;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .map-clean-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-info {
+    text-align: center;
+  }
+
+  .map-clean-layout iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
 
     iframe {
       width: 100%;
@@ -336,6 +377,8 @@
         height: 180px;
       }
 
+      
+      
     }
   </style>
 </head>
@@ -355,7 +398,7 @@
   <section class="hero-topo">
     <div class="hero-container">
       <div class="hero-left">
-        <img src="img/logo.png" alt="Logo MGM Gestão" class="hero-logo" />
+        <img src="img/logo.png" alt="Logo MGM Gestão" class="hero-logo hero-left-img" />
       </div>
       <div class="hero-text" style="text-align: center; max-width: 600px;">
         <h1>Soluções Completas<br>em Saúde e Segurança no Trabalho</h1>
@@ -365,7 +408,7 @@
         </div>
       </div>
       <div class="hero-right">
-        <img src="img/coracao.png" alt="Coração" class="hero-logo" />
+        <img src="img/coracao.png" alt="Coração" class="hero-logo hero-right-img" />
       </div>
     </div>
   </section>
@@ -379,6 +422,12 @@
     gap: 2rem;
     text-align: center;
   }
+
+  .hero-topo {
+  position: relative;
+  overflow: hidden;
+}
+
   
   .hero-left,
   .hero-right {
@@ -387,16 +436,38 @@
     justify-content: center;
   }
   
+  .hero-right {
+    justify-content: flex-end;
+  }
+  
   .hero-text {
     flex: 2;
     min-width: 300px;
   }
   
   .hero-logo {
-    height: 220px;
+    height: 280px;
     max-width: 100%;
     object-fit: contain;
   }
+  
+  .hero-left-img {
+    margin-left: -10px;
+  }
+  
+  .hero-right-img {
+  position: absolute;
+  bottom: -20px;     /* empurra a parte de baixo da imagem para fora */
+  right: 0px;      /* empurra para fora da lateral direita */
+  width: 340px;      /* aumenta o tamanho visual */
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
   
   @media (max-width: 768px) {
     .hero-container {
@@ -407,7 +478,10 @@
       order: -1;
     }
     .hero-logo {
-      height: 180px;
+      height: 200px;
+    }
+    .hero-right-img {
+      margin-right: 0;
     }
   }
   </style>
@@ -444,6 +518,46 @@
     </div>
   </section>
 
+  <section id="informativo" style="background-color: #ffffff; padding: 4rem 2rem;">
+    <h3 class="section-title">Multas eSocial SST</h3>
+    <div class="section-content">
+      <p>Com a publicação da <strong>Portaria Interministerial MPS/MF Nº 6 de 2025</strong>, os valores das multas eSocial SST foram atualizados para o <strong>LTCAT – Laudo Técnico das Condições do Ambiente de Trabalho</strong> e para o <strong>PPP – Perfil Profissiográfico Previdenciário</strong>.</p>
+  
+      <p>A chegada do <strong>PPP Eletrônico</strong>, do <strong>DET – Domicílio Eletrônico Trabalhista</strong> e de sistemas inteligentes como um todo tem facilitado a fiscalização.</p>
+  
+      <p>A Portaria ainda reajustou os benefícios do INSS.</p>
+  
+      <h4>Relação LTCAT e PPP</h4>
+      <p>O <strong>LTCAT</strong> é o laudo que identifica e avalia os riscos ambientais aos quais os trabalhadores estão expostos. O documento impacta diretamente na concessão ou não da aposentadoria especial.</p>
+  
+      <p>Quando o LTCAT não traz as informações corretas, ele impacta negativamente o PPP. Isso porque ele depende das informações do LTCAT para ser preenchido corretamente.</p>
+  
+      <h4>Valores das Multas eSocial SST para LTCAT e PPP</h4>
+      <p><strong>Saiba quanto pode custar o não envio dos eventos ou o envio de informações equivocadas:</strong></p>
+      <ul style="padding-left: 1.2rem; line-height: 1.8;">
+        <li>Valor mínimo: R$ 3.368,43</li>
+        <li>Valor máximo: R$ 336.841,70</li>
+      </ul>
+  
+      <h4>Demais Valores das Multas eSocial SST</h4>
+      <p>Para chegar aos valores abaixo, diversas fontes foram consultadas como: Portarias, Decretos, NRs, INs, RPS e CLT. Confira:</p>
+      <ul style="padding-left: 1.2rem; line-height: 1.8;">
+        <li>Multa PGR: De R$ 634,00 a R$ 6.304,00</li>
+        <li>Multa PCMSO: De R$ 378,00 a R$ 3.782,00</li>
+        <li>Multa CAT (Evento S-2210): R$ 98.484,45</li>
+        <li>Multa eSocial (Falha ou Não Prestação): De R$ 443,15 a R$ 44.318,03</li>
+        <li>Multa Exame Toxicológico (S-2221): De R$ 440,07 a R$ 44.007,30</li>
+        <li>Multa Exposição a Agentes Nocivos (S-2240): De R$ 3.368,43 a R$ 336.841,70</li>
+      </ul>
+  
+      <h4>Impacto das Multas eSocial SST</h4>
+      <p>Os valores substanciais das multas podem prejudicar as empresas. É mais prudente investir em uma gestão eficiente da medicina e segurança do trabalho do que arcar com as consequências de não atender à legislação.</p>
+  
+      <p><strong>As multas são aplicadas por trabalhador</strong>, ou seja, o valor deve ser multiplicado pela quantidade de funcionários afetados. Se houver reincidência, os valores podem ser <strong>triplicados</strong>, tornando a situação ainda mais grave para as empresas.</p>
+    </div>
+  </section>
+  
+
   <section id="contato">
     <h3 class="section-title">Fale Conosco</h3>
     <form onsubmit="enviarFormulario(event)">
@@ -455,16 +569,17 @@
   </section>
 
   <div class="map-section">
-    <h3>Venha nos visitar!</h3>
-    <div class="map-content">
-      <div class="map-text">
-        <p><strong>Endereço:</strong> Rua Oriano Mendes, 951 - Centro, Sobral - CE</p>
-        <p><strong>Telefone:</strong> (88) 3675-2949</p>
-        <p><strong>E-mail:</strong> contato@mgmgestao.com.br</p>
+    <h3 class="section-title">Venha nos visitar!</h3>
+    <div class="map-clean-layout">
+      <div class="map-info">
+        <p><strong>Endereço:</strong><br>Rua Oriano Mendes, 951 - Centro, Sobral - CE</p>
+        <p><strong>Telefone:</strong><br>(88) 3675-2949</p>
+        <p><strong>E-mail:</strong><br>contato@mgmgestao.com.br</p>
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen></iframe>
     </div>
   </div>
+  
 
   <footer>
     <p>&copy; <span id="ano"></span> MGM Gestão. Todos os direitos reservados.</p>
