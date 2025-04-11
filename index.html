@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MGM Gestão - Saúde Ocupacional e Segurança do Trabalho</title>
   <style>
-    /* Reset e Variáveis */
     :root {
-      --azul-escuro: #1e3a8a;
-      --azul: #1d4ed8;
-      --cinza-claro: #f3f4f6;
+      --verde-claro: #d8fff6;
+      --verde-agua: #00ecde;
+      --verde-escuro: #225d4d;
       --branco: #ffffff;
       --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       --font-size-base: 16px;
       --font-size-lg: 18px;
       --font-size-xl: 24px;
-      --max-width: 900px; /* Largura máxima para os textos */
+      --max-width: 900px;
     }
 
     * {
@@ -28,7 +27,7 @@
       font-family: var(--fonte);
       color: #333;
       line-height: 1.6;
-      background-color: #f3f4f6;
+      background-color: var(--verde-claro);
       width: 100%;
       margin: 0;
     }
@@ -39,9 +38,8 @@
       margin: 0 auto;
     }
 
-    /* Cabeçalho */
     header {
-      background: var(--azul-escuro);
+      background: var(--verde-escuro);
       color: var(--branco);
       padding: 1.5rem 2rem;
       display: flex;
@@ -75,6 +73,7 @@
       font-size: var(--font-size-lg);
       text-decoration: none;
       transition: color 0.3s ease, transform 0.3s ease;
+      position: relative;
     }
 
     nav ul li a::after {
@@ -82,14 +81,14 @@
       position: absolute;
       width: 0;
       height: 2px;
-      background-color: var(--azul);
+      background-color: var(--verde-agua);
       bottom: 0;
       left: 50%;
       transition: width 0.3s ease, left 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: var(--azul);
+      color: var(--verde-agua);
     }
 
     nav ul li a:hover::after {
@@ -97,9 +96,8 @@
       left: 0;
     }
 
-    /* Hero Topo */
     .hero-topo {
-      background: linear-gradient(to right, #1e3a8a 40%, #1d4ed8 100%);
+      background: linear-gradient(to right, var(--verde-escuro) 40%, var(--verde-agua) 100%);
       color: white;
       padding: 6rem 2rem;
       display: flex;
@@ -133,7 +131,7 @@
 
     .hero-btn {
       padding: 1rem 2rem;
-      background: #1d4ed8;
+      background: var(--verde-agua);
       color: white;
       text-decoration: none;
       font-weight: 700;
@@ -144,12 +142,11 @@
     }
 
     .hero-btn:hover {
-      background: #1e3a8a;
+      background: var(--verde-escuro);
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    /* Animações */
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
@@ -160,10 +157,9 @@
       100% { transform: translateX(0); opacity: 1; }
     }
 
-    /* Seção Quem Somos */
     .section-title {
       font-size: 2.2rem;
-      color: var(--azul-escuro);
+      color: var(--verde-escuro);
       margin-bottom: 2rem;
       font-weight: 700;
     }
@@ -178,16 +174,15 @@
       text-align: justify;
     }
 
-    /* Seção Serviços */
     #servicos {
-      background: var(--cinza-claro);
+      background: var(--verde-claro);
       padding: 4rem 2rem;
       width: 100%;
     }
 
     #servicos h3 {
       font-size: 2.5rem;
-      color: var(--azul-escuro);
+      color: var(--verde-escuro);
       margin-bottom: 2rem;
       font-weight: 700;
     }
@@ -220,7 +215,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Seção Contato */
     #contato {
       padding: 4rem 2rem;
     }
@@ -252,12 +246,12 @@
 
     input:focus, textarea:focus {
       outline: none;
-      border-color: var(--azul);
+      border-color: var(--verde-agua);
     }
 
     button {
       padding: 1rem 2rem;
-      background: #1d4ed8;
+      background: var(--verde-agua);
       color: white;
       text-decoration: none;
       font-weight: 700;
@@ -268,21 +262,20 @@
     }
 
     button:hover {
-      background: #1e3a8a;
+      background: var(--verde-escuro);
       transform: scale(1.05);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Seção Localização */
     .map-section {
-      background: var(--cinza-claro);
+      background: var(--verde-claro);
       padding: 4rem 2rem;
       text-align: center;
     }
 
     .map-section h3 {
       font-size: 2rem;
-      color: var(--azul-escuro);
+      color: var(--verde-escuro);
       margin-bottom: 2rem;
     }
 
@@ -316,28 +309,10 @@
       .map-content {
         grid-template-columns: 1fr;
       }
-
-      .hero-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .hero-left {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .service-item {
-        font-size: 1.1rem;
-      }
-
-      #servicos .section-content {
-        grid-template-columns: 1fr;
-      }
     }
 
     footer {
-      background: var(--azul-escuro);
+      background: var(--verde-escuro);
       color: var(--branco);
       text-align: center;
       padding: 2rem 1rem;
@@ -347,7 +322,6 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
   <header>
     <h1>MGM Gestão</h1>
     <nav>
@@ -359,7 +333,6 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero-topo">
     <div class="hero-container">
       <div class="hero-left">
@@ -373,7 +346,6 @@
     </div>
   </section>
 
-  <!-- Seção Quem Somos -->
   <section id="sobre">
     <h3 class="section-title">Quem Somos</h3>
     <div class="section-content">
@@ -382,7 +354,6 @@
     </div>
   </section>
 
-  <!-- Seção Serviços -->
   <section id="servicos">
     <h3 class="section-title">Serviços Oferecidos</h3>
     <div class="section-content">
@@ -406,7 +377,6 @@
     </div>
   </section>
 
-  <!-- Seção Contato -->
   <section id="contato">
     <h3 class="section-title">Fale Conosco</h3>
     <form onsubmit="enviarFormulario(event)">
@@ -417,7 +387,6 @@
     </form>
   </section>
 
-  <!-- Seção de Localização -->
   <div class="map-section">
     <h3>Venha nos visitar!</h3>
     <div class="map-content">
@@ -430,7 +399,6 @@
     </div>
   </div>
 
-  <!-- Rodapé -->
   <footer>
     <p>&copy; <span id="ano"></span> MGM Gestão. Todos os direitos reservados.</p>
   </footer>
@@ -440,11 +408,10 @@
 
     function enviarFormulario(e) {
       e.preventDefault();
-      
       const nome = e.target.querySelector('input[placeholder="Seu nome"]').value;
       const endereco = e.target.querySelector('input[placeholder="Seu endereço"]').value;
       const mensagem = e.target.querySelector('textarea[placeholder="Sua mensagem"]').value;
-      
+
       const numeroWhatsapp = '5588997263753';
       const texto = `Olá, sou ${nome}%0AEndereço: ${endereco}%0AMensagem: ${mensagem}`;
       const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${texto}`;
