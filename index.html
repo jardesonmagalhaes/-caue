@@ -383,6 +383,13 @@
     }
   </style>
 </head>
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/+5585986593489?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20MGM%20Gestão." target="_blank" style="position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); z-index: 999;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.74 11.74 0 0012 0a11.74 11.74 0 00-8.52 3.48A11.72 11.72 0 000 12c0 2.1.55 4.09 1.6 5.84L0 24l6.3-1.64A11.79 11.79 0 0012 24c3.15 0 6.14-1.23 8.52-3.48A11.74 11.74 0 0024 12c0-3.15-1.23-6.14-3.48-8.52zM12 21.54a9.34 9.34 0 01-4.77-1.27l-.34-.2-3.73.97.99-3.64-.22-.37A9.28 9.28 0 012.46 12a9.43 9.43 0 0116.07-6.67A9.45 9.45 0 0121.54 12c0 5.27-4.27 9.54-9.54 9.54zm5.41-7.16l-1.5-.42c-.2-.06-.42-.03-.59.09l-.65.49a.47.47 0 01-.61-.02 7.5 7.5 0 01-2.47-2.47.47.47 0 01-.02-.61l.49-.65c.12-.17.15-.4.09-.59l-.42-1.5a.46.46 0 00-.45-.33h-1c-.53 0-1.05.23-1.41.63-.36.41-.55.95-.54 1.51.02.94.39 2.01 1.1 3.1.65.98 1.49 1.82 2.47 2.47 1.1.71 2.17 1.08 3.1 1.1h.06c.56 0 1.1-.19 1.51-.54.4-.36.63-.88.63-1.41v-1c0-.2-.13-.39-.33-.45z"/>
+  </svg>
+  
+</a>
 <body>
   <header>
     <h1>MGM Gestão</h1>
@@ -489,103 +496,214 @@
   
 
 
-  <section id="sobre">
-    <h3 class="section-title">Quem Somos</h3>
-    <div class="section-content">
-      <p>A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas. Atuamos de forma personalizada, buscando soluções eficazes que promovam o bem-estar dos trabalhadores, a redução de riscos e a conformidade com a legislação vigente.
+<!-- QUEM SOMOS -->
+<section id="sobre" style="background-color: #f1f1f1e6; padding: 4rem 2rem;">
+  <h3 class="section-title" style="color: #225d4d; text-align: center;">Quem Somos</h3>
+  <div class="section-content" style="text-align: center; max-width: 900px; margin: 0 auto; color: #444;">
+    <p>
+      A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas. Atuamos de forma personalizada, buscando soluções eficazes que promovam o bem-estar dos trabalhadores, a redução de riscos e a conformidade com a legislação vigente.
+    </p>
+    <br />
+    <p>
+      Com uma equipe multidisciplinar altamente qualificada, oferecemos suporte técnico e estratégico para empresas de diversos portes e segmentos. Nosso compromisso é com a valorização da vida, o respeito às normas e a excelência nos serviços prestados.
+    </p>
+  </div>
+</section>
 
-        Com uma equipe multidisciplinar altamente qualificada, oferecemos suporte técnico e estratégico para empresas de diversos portes e segmentos, contribuindo para ambientes de trabalho mais saudáveis, seguros e produtivos. Nosso compromisso é com a valorização da vida, o respeito às normas e a excelência nos serviços prestados.</p>
-    </div>
-  </section>
+<style>
+  .servico-bloco {
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+  }
 
-  <section id="servicos">
-    <h3 class="section-title">Serviços Oferecidos</h3>
-    <div class="section-content">
-      <div class="service-item">
-        <span>📄</span>
-        <h4>ASO – Atestado de Saúde Ocupacional</h4>
+  .servico-bloco:hover {
+    transform: scale(1.03);
+  }
+
+  .icone-servico {
+    background-color: #e6f7f5;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .icone-servico svg {
+    width: 30px;
+    height: 30px;
+    fill: #225d4d;
+  }
+
+  .servico-bloco h4 {
+    margin: 0.5rem 0;
+    font-weight: 700;
+    color: #225d4d;
+  }
+
+  .servico-bloco p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+</style>
+
+  
+<section id="servicos" style="background-color: #f9f9f9; padding: 4rem 2rem;">
+  <h3 class="section-title" style="color: #225d4d; text-align: center;">Nossos Serviços</h3>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.05rem; color: #555;">
+    Na MGM Gestão, oferecemos soluções completas em saúde ocupacional e segurança do trabalho, com serviços personalizados para sua empresa.
+  </p>
+
+  <style>
+    .servico-bloco {
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .servico-bloco:hover {
+      transform: scale(1.03);
+    }
+
+    .icone-servico {
+      background-color: #e1f0ed;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .icone-servico svg {
+      width: 30px;
+      height: 30px;
+      fill: #225d4d;
+    }
+
+    .servico-bloco h4 {
+      margin: 0.5rem 0;
+      font-weight: 700;
+      color: #225d4d;
+    }
+
+    .servico-bloco p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  </style>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 3rem; max-width: 1200px; margin: 0 auto;">
+    <div style="flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+
+      <!-- ASO -->
+      <div class="servico-bloco">
+        <div class="icone-servico">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 2a2 2 0 0 0-2 2v16.01A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V8.828a2 2 0 0 0-.586-1.414l-5.828-5.828A2 2 0 0 0 12.172 1H6zm7 1.414 5.586 5.586H14a1 1 0 0 1-1-1V3.414zM8 13h8v2H8v-2zm0 4h5v2H8v-2z"/>
+          </svg>
+        </div>
+        <h4>ASO - Atestado de Saúde Ocupacional</h4>
+        <p>Admissional, Periódico, Demissional, Retorno ao Trabalho e Mudança de Função.</p>
       </div>
-      <p>Exame Admissional, Periódico, Demissional, Retorno ao Trabalho e Mudança de Função.</p>
 
-      <div class="service-item">
-        <span>🧪</span>
+      <!-- Exames -->
+      <div class="servico-bloco">
+        <div class="icone-servico">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21.75 20.25l-5.3-5.3a7.5 7.5 0 1 0-1.4 1.4l5.3 5.3a1 1 0 0 0 1.4-1.4zM10.5 16a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+          </svg>
+        </div>
         <h4>Exames Complementares</h4>
+        <p>Audiometria, Acuidade Visual, ECG, Espirometria e Exames Laboratoriais.</p>
       </div>
-      <p>Audiometria, Acuidade Visual, ECG, Espirometria e exames laboratoriais.</p>
 
-      <div class="service-item">
-        <span>📘</span>
+      <!-- Laudos -->
+      <div class="servico-bloco">
+        <div class="icone-servico">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 3H5a2 2 0 0 0-2 2v14a1 1 0 0 0 1.447.894L9 17.118l4.553 2.776A1 1 0 0 0 15 19V5a2 2 0 0 0-2-2zM8 7h8v2H8V7zm0 4h5v2H8v-2z"/>
+          </svg>
+        </div>
         <h4>Programas e Laudos Técnicos</h4>
+        <p>PCMSO, PGR, LTCAT, PPP e Treinamentos (NRs).</p>
       </div>
-      <p>PCMSO, PGR, LTCAT, PPP e treinamentos (NRs).</p>
+
+      <!-- Suporte -->
+      <div class="servico-bloco">
+        <div class="icone-servico">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-3.5 0-6.7 2.1-7.8 5.1a1 1 0 0 0 .93 1.4h13.74a1 1 0 0 0 .93-1.4c-1.1-3-4.3-5.1-7.8-5.1z"/>
+          </svg>
+        </div>
+        <h4>Atendimento Personalizado</h4>
+        <p>Equipe técnica qualificada e suporte completo para sua empresa.</p>
+      </div>
+
     </div>
-  </section>
 
-  <section id="informativo" style="background-color: #ffffff; padding: 4rem 2rem;">
-    <h3 class="section-title">Multas eSocial SST</h3>
-    <div class="section-content">
-      <p>Com a publicação da <strong>Portaria Interministerial MPS/MF Nº 6 de 2025</strong>, os valores das multas eSocial SST foram atualizados para o <strong>LTCAT – Laudo Técnico das Condições do Ambiente de Trabalho</strong> e para o <strong>PPP – Perfil Profissiográfico Previdenciário</strong>.</p>
-  
-      <p>A chegada do <strong>PPP Eletrônico</strong>, do <strong>DET – Domicílio Eletrônico Trabalhista</strong> e de sistemas inteligentes como um todo tem facilitado a fiscalização.</p>
-  
-      <p>A Portaria ainda reajustou os benefícios do INSS.</p>
-  
-      <h4>Relação LTCAT e PPP</h4>
-      <p>O <strong>LTCAT</strong> é o laudo que identifica e avalia os riscos ambientais aos quais os trabalhadores estão expostos. O documento impacta diretamente na concessão ou não da aposentadoria especial.</p>
-  
-      <p>Quando o LTCAT não traz as informações corretas, ele impacta negativamente o PPP. Isso porque ele depende das informações do LTCAT para ser preenchido corretamente.</p>
-  
-      <h4>Valores das Multas eSocial SST para LTCAT e PPP</h4>
-      <p><strong>Saiba quanto pode custar o não envio dos eventos ou o envio de informações equivocadas:</strong></p>
-      <ul style="padding-left: 1.2rem; line-height: 1.8;">
-        <li>Valor mínimo: R$ 3.368,43</li>
-        <li>Valor máximo: R$ 336.841,70</li>
-      </ul>
-  
-      <h4>Demais Valores das Multas eSocial SST</h4>
-      <p>Para chegar aos valores abaixo, diversas fontes foram consultadas como: Portarias, Decretos, NRs, INs, RPS e CLT. Confira:</p>
-      <ul style="padding-left: 1.2rem; line-height: 1.8;">
-        <li>Multa PGR: De R$ 634,00 a R$ 6.304,00</li>
-        <li>Multa PCMSO: De R$ 378,00 a R$ 3.782,00</li>
-        <li>Multa CAT (Evento S-2210): R$ 98.484,45</li>
-        <li>Multa eSocial (Falha ou Não Prestação): De R$ 443,15 a R$ 44.318,03</li>
-        <li>Multa Exame Toxicológico (S-2221): De R$ 440,07 a R$ 44.007,30</li>
-        <li>Multa Exposição a Agentes Nocivos (S-2240): De R$ 3.368,43 a R$ 336.841,70</li>
-      </ul>
-  
-      <h4>Impacto das Multas eSocial SST</h4>
-      <p>Os valores substanciais das multas podem prejudicar as empresas. É mais prudente investir em uma gestão eficiente da medicina e segurança do trabalho do que arcar com as consequências de não atender à legislação.</p>
-  
-      <p><strong>As multas são aplicadas por trabalhador</strong>, ou seja, o valor deve ser multiplicado pela quantidade de funcionários afetados. Se houver reincidência, os valores podem ser <strong>triplicados</strong>, tornando a situação ainda mais grave para as empresas.</p>
-    </div>
-  </section>
-  
-
-  <section id="contato">
-    <h3 class="section-title">Fale Conosco</h3>
-    <form onsubmit="enviarFormulario(event)">
-      <input type="text" placeholder="Seu nome" required />
-      <input type="text" placeholder="Seu endereço" required />
-      <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-      <button class="btn" type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <div class="map-section">
-    <h3 class="section-title">Venha nos visitar!</h3>
-    <div class="map-clean-layout" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 900px; margin: 0 auto; align-items: flex-start;">
-      <div class="map-info" style="flex: 1; min-width: 280px; font-size: 1rem; color: #222; line-height: 1.6;">
-        <p><strong>Sede 01:</strong><br>Rua Luiza Amélia, Nº1423 - Centro - Piracuruca - PI</p>
-        <p><strong>Sede 02:</strong><br>Rua 01, Nº560 - Residencial 2 - Maracanaú - CE</p>
-        <p><strong>Telefone:</strong><br>(88) 3675-2949</p>
-        <p><strong>E-mail:</strong><br>contato@mgmgestao.com.br</p>
-      </div>
-      <div style="flex: 1; min-width: 300px;">
-        <iframe src="https://www.google.com/maps?q=Rua+Luiza+Amelia,+1423,+Piracuruca,+PI&output=embed" allowfullscreen style="width: 100%; height: 250px; border: 0; border-radius: 6px;"></iframe>
-      </div>
+    <!-- Imagem Lateral -->
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+      <img src="img/sdt.jpg" alt="Profissional em segurança do trabalho" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);" />
     </div>
   </div>
-  
+</section>
+
+
+<!-- MULTAS -->
+<section id="informativo" style="background-color: #f1f1f1e6; padding: 4rem 2rem;">
+  <h3 class="section-title" style="text-align: center; color: #225d4d;">Multas eSocial SST</h3>
+  <div class="section-content" style="max-width: 900px; margin: 0 auto; color: #444;">
+    <p>Com a publicação da <strong>Portaria Interministerial MPS/MF Nº 6 de 2025</strong>, os valores das multas eSocial SST foram atualizados.</p>
+    <p>O <strong>LTCAT</strong> e o <strong>PPP</strong> são documentos essenciais na comprovação de exposição a riscos e devem ser preenchidos corretamente.</p>
+    <ul style="padding-left: 1.5rem; line-height: 1.8;">
+      <li><strong>LTCAT:</strong> de R$ 3.368,43 a R$ 336.841,70</li>
+      <li><strong>PGR:</strong> R$ 634,00 a R$ 6.304,00</li>
+      <li><strong>PCMSO:</strong> R$ 378,00 a R$ 3.782,00</li>
+      <li><strong>eSocial:</strong> R$ 443,15 a R$ 44.318,03</li>
+      <li><strong>CAT (S-2210):</strong> R$ 98.484,45</li>
+      <li><strong>Toxicológico (S-2221):</strong> R$ 440,07 a R$ 44.007,30</li>
+    </ul>
+    <p><strong>Obs:</strong> Os valores podem ser multiplicados por funcionário e triplicados em casos de reincidência.</p>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" style="background-color: #ffffff; padding: 4rem 2rem;">
+  <h3 class="section-title" style="text-align: center; color: #225d4d;">Fale Conosco</h3>
+  <form onsubmit="enviarFormulario(event)" style="max-width: 600px; margin: 0 auto; display: grid; gap: 1rem; padding: 2rem; background: #fdfdfd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    <input type="text" placeholder="Seu nome" required />
+    <input type="text" placeholder="Seu endereço" required />
+    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</section>
+
+
+<!-- MAPA -->
+<div class="map-section" style="background-color: #f9f9f9e6; padding: 4rem 2rem;">
+  <h3 class="section-title" style="color: #225d4d; text-align: center;">Venha nos visitar!</h3>
+  <div class="map-clean-layout" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+    <div class="map-info" style="flex: 1; min-width: 280px; font-size: 1rem; color: #333;">
+      <p><strong>Sede 01:</strong><br>Rua Luiza Amélia, Nº1423 - Centro - Piracuruca - PI</p>
+      <p><strong>Sede 02:</strong><br>Rua 01, Nº560 - Residencial 2 - Maracanaú - CE</p>
+      <p><strong>Telefone:</strong><br>(85) 98659-3489</p>
+      <p><strong>E-mail:</strong><br>contato@mgmgestao.com.br</p>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <iframe src="https://www.google.com/maps?q=Rua+Luiza+Amelia,+1423,+Piracuruca,+PI&output=embed" allowfullscreen style="width: 100%; height: 250px; border: 0; border-radius: 6px;"></iframe>
+    </div>
+  </div>
+</div>
+
 
   <footer>
     <p>&copy; <span id="ano"></span> MGM Gestão. Todos os direitos reservados.</p>
