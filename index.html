@@ -378,6 +378,7 @@
         height: 180px;
       }
 
+
       
       
     }
@@ -399,6 +400,7 @@
         <li><a href="#sobre">Quem Somos</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="#planos">Planos</a></li>
       </ul>
     </div>
   </header>
@@ -497,7 +499,7 @@
 
 
 <!-- QUEM SOMOS -->
-<section id="sobre" style="background-color: #f1f1f1e6; padding: 4rem 2rem;">
+<section id="sobre" style="background-color: #d6d6d6c3; padding: 4rem 2rem;">
   <h3 class="section-title" style="color: #225d4d; text-align: center;">Quem Somos</h3>
   <div class="section-content" style="text-align: center; max-width: 900px; margin: 0 auto; color: #444;">
     <p>
@@ -657,6 +659,122 @@
   </div>
 </section>
 
+<!-- PLANOS -->
+<section id="planos" style="background-color: #d6d6d6c3; padding: 4rem 2rem;">
+  <h3 class="section-title" style="text-align: center;">Tabela de Preços</h3>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; color: #444;">
+    Escolha o plano ideal para sua empresa. Soluções completas com valores acessíveis.
+  </p>
+
+  <div class="planos-grid">
+    <div class="plano-card">
+      <h4>Começar</h4>
+      <p class="preco">Gratuito</p>
+      <ul>
+        <li>1 Usuário</li>
+        <li>1 Projeto</li>
+      </ul>
+      <a href="#contato" class="btn-plano">Peça agora</a>
+    </div>
+
+    <div class="plano-card">
+      <h4>Básico</h4>
+      <p class="preco">R$19,99</p>
+      <ul>
+        <li>5 Usuários</li>
+        <li>5 Projetos</li>
+      </ul>
+      <a href="#contato" class="btn-plano">Peça agora</a>
+    </div>
+
+    <div class="plano-card">
+      <h4>Médio</h4>
+      <p class="preco">R$49,99</p>
+      <ul>
+        <li>100 Usuários</li>
+        <li>100 Projetos</li>
+      </ul>
+      <a href="#contato" class="btn-plano">Peça agora</a>
+    </div>
+
+    <div class="plano-card">
+      <h4>Especialista</h4>
+      <p class="preco">R$199,99</p>
+      <ul>
+        <li>Usuários ilimitados</li>
+        <li>Projetos ilimitados</li>
+      </ul>
+      <a href="#contato" class="btn-plano">Peça agora</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .planos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .plano-card {
+    background: #fff;
+    border: 2px solid var(--verde-agua);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .plano-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .plano-card h4 {
+    color: var(--verde-escuro);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .plano-card .preco {
+    font-size: 1.5rem;
+    color: var(--verde-agua);
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+
+  .plano-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    color: #444;
+  }
+
+  .plano-card ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-plano {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--verde-agua);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .btn-plano:hover {
+    background-color: var(--verde-escuro);
+  }
+</style>
+
 
 <!-- MULTAS -->
 <section id="informativo" style="background-color: #f1f1f1e6; padding: 4rem 2rem;">
@@ -677,7 +795,7 @@
 </section>
 
 <!-- CONTATO -->
-<section id="contato" style="background-color: #ffffff; padding: 4rem 2rem;">
+<section id="contato" style="background-color: #d6d6d6c3; padding: 4rem 2rem;">
   <h3 class="section-title" style="text-align: center; color: #225d4d;">Fale Conosco</h3>
   <form onsubmit="enviarFormulario(event)" style="max-width: 600px; margin: 0 auto; display: grid; gap: 1rem; padding: 2rem; background: #fdfdfd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
     <input type="text" placeholder="Seu nome" required />
