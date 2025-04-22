@@ -393,7 +393,9 @@
 </a>
 <body>
   <header>
-    <h1>MGM Gestão</h1>
+    <div style="display: flex; align-items: center;">
+      <img src="img/logo.png" alt="Logo MGM Gestão" class="logo-topo">
+    </div>
     <div class="menu-container">
       <button class="menu-toggle" onclick="toggleDropdown()">Menu &#x25BE;</button>
       <ul class="menu-dropdown" id="menuDropdown">
@@ -404,21 +406,18 @@
       </ul>
     </div>
   </header>
-
+  
   <section class="hero-topo">
     <div class="hero-container">
-      <div class="hero-left">
-        <img src="img/logo.png" alt="Logo MGM Gestão" class="hero-logo hero-left-img" />
-      </div>
-      <div class="hero-text" style="text-align: center; max-width: 600px;">
+      <div class="hero-content">
         <h1>Soluções Completas<br>em Saúde e Segurança no Trabalho</h1>
         <p>Na MGM Gestão, você reduz custos, garante a segurança da sua empresa e encontra todas as soluções num só lugar.</p>
         <div style="margin-top: 2rem;">
           <a href="#servicos" class="btn hero-btn">Conheça nossos serviços</a>
         </div>
       </div>
-      <div class="hero-right">
-        <img src="img/coracao.png" alt="Coração" class="hero-logo hero-right-img" />
+      <div class="hero-bg-img">
+        <img src="img/coracao.png" alt="Coração decorativo" />
       </div>
     </div>
   </section>
@@ -494,6 +493,81 @@
       margin-right: 0;
     }
   }
+
+  .logo-topo {
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.logo-topo:hover {
+  transform: scale(1.04);
+}
+
+.hero-topo {
+  background: linear-gradient(to right, var(--verde-escuro) 40%, var(--verde-agua) 100%);
+  color: white;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 700px;
+  flex: 1 1 100%;
+}
+
+.hero-bg-img {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  z-index: 0;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.hero-bg-img img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-topo {
+    padding: 4rem 1rem;
+  }
+
+  .hero-bg-img img {
+    max-width: 250px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
   </style>
   
 
@@ -503,11 +577,15 @@
   <h3 class="section-title" style="color: #225d4d; text-align: center;">Quem Somos</h3>
   <div class="section-content" style="text-align: center; max-width: 900px; margin: 0 auto; color: #444;">
     <p>
-      A MGM Gestão é uma empresa especializada em saúde ocupacional e segurança do trabalho, comprometida com a qualidade, a prevenção e o cuidado com a saúde dos colaboradores nas empresas. Atuamos de forma personalizada, buscando soluções eficazes que promovam o bem-estar dos trabalhadores, a redução de riscos e a conformidade com a legislação vigente.
+      A <strong>MGM Gestão</strong> é uma empresa especializada em <strong>Saúde Ocupacional</strong> e <strong>Segurança do Trabalho</strong>, comprometida com o cuidado integral das pessoas e com a conformidade legal das empresas.
     </p>
     <br />
     <p>
-      Com uma equipe multidisciplinar altamente qualificada, oferecemos suporte técnico e estratégico para empresas de diversos portes e segmentos. Nosso compromisso é com a valorização da vida, o respeito às normas e a excelência nos serviços prestados.
+      Com uma abordagem personalizada e humanizada, oferecemos soluções completas para promover ambientes de trabalho mais seguros, saudáveis e produtivos. Atuamos com base na legislação vigente, aliando tecnologia, eficiência e atendimento de excelência.
+    </p>
+    <br />
+    <p>
+      Contamos com uma equipe <strong>multidisciplinar altamente qualificada</strong>, pronta para atender empresas de todos os portes e segmentos, com foco na <strong>prevenção, valorização da vida e redução de riscos ocupacionais</strong>.
     </p>
   </div>
 </section>
@@ -668,41 +746,37 @@
 
   <div class="planos-grid">
     <div class="plano-card">
-      <h4>Começar</h4>
-      <p class="preco">Gratuito</p>
+      <h4>PCMSO</h4>
+      <p class="preco">R$199,00</p>
       <ul>
-        <li>1 Usuário</li>
-        <li>1 Projeto</li>
+      
       </ul>
       <a href="#contato" class="btn-plano">Peça agora</a>
     </div>
 
     <div class="plano-card">
-      <h4>Básico</h4>
-      <p class="preco">R$19,99</p>
+      <h4>PGR</h4>
+      <p class="preco">R$349,00</p>
       <ul>
-        <li>5 Usuários</li>
-        <li>5 Projetos</li>
+       
       </ul>
       <a href="#contato" class="btn-plano">Peça agora</a>
     </div>
 
     <div class="plano-card">
-      <h4>Médio</h4>
-      <p class="preco">R$49,99</p>
+      <h4>LTCAT</h4>
+      <p class="preco">R$249,00</p>
       <ul>
-        <li>100 Usuários</li>
-        <li>100 Projetos</li>
+      
       </ul>
       <a href="#contato" class="btn-plano">Peça agora</a>
     </div>
 
     <div class="plano-card">
-      <h4>Especialista</h4>
-      <p class="preco">R$199,99</p>
+      <h4>PACOTE COMPLETO</h4>
+      <p class="preco">R$780,00</p>
       <ul>
-        <li>Usuários ilimitados</li>
-        <li>Projetos ilimitados</li>
+
       </ul>
       <a href="#contato" class="btn-plano">Peça agora</a>
     </div>
