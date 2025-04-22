@@ -755,7 +755,7 @@
       <ul>
       
       </ul>
-      <a href="#contato" class="btn-plano">Peça agora</a>
+      <a href="https://wa.me/5585986593489?text=Olá!%20Tenho%20interesse%20no%20plano%20PCMSO%20oferecido%20pela%20MGM%20Gestão.%20Poderia%20me%20passar%20mais%20informações?" class="btn-plano" target="_blank">Peça agora</a>
     </div>
 
     <div class="plano-card">
@@ -764,7 +764,7 @@
       <ul>
        
       </ul>
-      <a href="#contato" class="btn-plano">Peça agora</a>
+      <a href="https://wa.me/5585986593489?text=Olá!%20Tenho%20interesse%20no%20plano%20PGR%20oferecido%20pela%20MGM%20Gestão.%20Gostaria%20de%20saber%20mais%20detalhes." class="btn-plano" target="_blank">Peça agora</a>
     </div>
 
     <div class="plano-card">
@@ -773,7 +773,7 @@
       <ul>
       
       </ul>
-      <a href="#contato" class="btn-plano">Peça agora</a>
+      <a href="https://wa.me/5585986593489?text=Olá!%20Vi%20o%20plano%20LTCAT%20no%20site%20da%20MGM%20Gestão%20e%20tenho%20interesse.%20Pode%20me%20enviar%20mais%20informações?" class="btn-plano" target="_blank">Peça agora</a>
     </div>
 
     <div class="plano-card">
@@ -782,7 +782,7 @@
       <ul>
 
       </ul>
-      <a href="#contato" class="btn-plano">Peça agora</a>
+      <a href="https://wa.me/5585986593489?text=Olá!%20Me%20interessei%20pelo%20Pacote%20Completo%20da%20MGM%20Gestão.%20Quero%20entender%20tudo%20que%20está%20incluso!" class="btn-plano" target="_blank">Peça agora</a>
     </div>
   </div>
 </section>
@@ -904,22 +904,66 @@
 </section>
 
 
-<!-- MAPA -->
-<div class="map-section" style="background-color: #f9f9f9e6; padding: 4rem 2rem;">
-  <h3 class="section-title" style="color: #225d4d; text-align: center;">Venha nos visitar!</h3>
-  <div class="map-clean-layout" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto;">
-    <div class="map-info" style="flex: 1; min-width: 280px; font-size: 1rem; color: #333;">
-      <p><strong>Sede 01:</strong><br>Rua Luiza Amélia, Nº1423 - Centro - Piracuruca - PI</p>
-      <p><strong>Sede 02:</strong><br>Rua 01, Nº560 - Residencial 2 - Maracanaú - CE</p>
-      <p><strong>Telefone:</strong><br>(85) 98659-3489</p>
-      <p><strong>E-mail:</strong><br>contato@mgmgestao.com.br</p>
-    </div>
-    <div style="flex: 1; min-width: 300px;">
-      <iframe src="https://www.google.com/maps?q=Rua+Luiza+Amelia,+1423,+Piracuruca,+PI&output=embed" allowfullscreen style="width: 100%; height: 250px; border: 0; border-radius: 6px;"></iframe>
-    </div>
-  </div>
-</div>
+<!-- SEÇÃO LOCALIZAÇÃO DAS SEDES -->
+<section id="localizacao-sedes" style="background-color: #ffffff; padding: 4rem 2rem;">
+  <h3 class="section-title" style="text-align: center; color: #225d4d;">Localização das Sedes</h3>
 
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <button class="map-btn" onclick="showMap(1)">Sede 01 - Piracuruca</button>
+    <button class="map-btn" onclick="showMap(2)">Sede 02 - Maracanaú</button>
+  </div>
+
+  <div class="map-info-text" id="mapInfo" style="text-align: center; font-size: 1rem; color: #333;">
+    <p><strong>Endereço:</strong> Rua Luiza Amélia, Nº1423 - Centro - Piracuruca - PI</p>
+    <p><strong>Telefone:</strong> (85) 98659-3489</p>
+    <p><strong>E-mail:</strong> contato@mgmgestao.com.br</p>
+  </div>
+
+  <div class="map-frame" style="width: 100%; max-width: 800px; margin: 2rem auto;">
+    <iframe id="mapFrame" src="https://www.google.com/maps?q=Rua+Luiza+Amelia,+1423,+Piracuruca,+PI&output=embed"
+      allowfullscreen style="width: 100%; height: 300px; border: 0; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    </iframe>
+  </div>
+
+  <style>
+    .map-btn {
+      background-color: #41b0a8;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin: 0 0.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .map-btn:hover {
+      background-color: #225d4d;
+    }
+  </style>
+
+  <script>
+    function showMap(id) {
+      const iframe = document.getElementById("mapFrame");
+      const info = document.getElementById("mapInfo");
+
+      if (id === 1) {
+        iframe.src = "https://www.google.com/maps?q=Rua+Luiza+Amelia,+1423,+Piracuruca,+PI&output=embed";
+        info.innerHTML = `
+          <p><strong>Endereço:</strong> Rua Luiza Amélia, Nº1423 - Centro - Piracuruca - PI</p>
+          <p><strong>Telefone:</strong> (85) 98659-3489</p>
+          <p><strong>E-mail:</strong> contato@mgmgestao.com.br</p>`;
+      } else {
+        iframe.src = "https://www.google.com/maps?q=Rua+01,+560,+Residencial+2,+Maracanaú,+CE&output=embed";
+        info.innerHTML = `
+          <p><strong>Endereço:</strong> Rua 01, Nº560 - Residencial 2 - Maracanaú - CE</p>
+          <p><strong>Telefone:</strong> (85) 98659-3489</p>
+          <p><strong>E-mail:</strong> contato@mgmgestao.com.br</p>`;
+      }
+    }
+  </script>
+</section>
 
   <footer>
     <p>&copy; <span id="ano"></span> MGM Gestão. Todos os direitos reservados.</p>
